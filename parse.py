@@ -17,6 +17,9 @@ def convertCSV(fileName):
 
 	fileKeys = f.readline().lstrip().rstrip().split(',')
 
+	for idx, key in enumerate(fileKeys):
+		fileKeys[idx] = fileKeys[idx].replace("\"", "")
+
 	for line in f:
 		
 		thisLine = line.lstrip().rstrip().split(',')
@@ -27,7 +30,7 @@ def convertCSV(fileName):
 
 			for idx, key in enumerate(fileKeys):
 				
-				thisObject[key] = thisLine[idx]
+				thisObject[key] = thisLine[idx].replace("\"", "")
 
 			#print thisObject
 
