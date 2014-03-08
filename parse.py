@@ -41,7 +41,4 @@ def convertCSV(fileName):
 
 	print "Parsing complete"
 
-
-#convertCSV('/Users/seantracey/Downloads/ndpb-high-earners.csv')
-
 convertCSV(args[0])
